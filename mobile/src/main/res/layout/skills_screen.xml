@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp" tools:layout_editor_absoluteY="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tableLayout" app:layout_constraintEnd_toStartOf="@+id/tableLayout"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/AbilityLayout">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button
+                    android:text="STR"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Str_Button"/>
+            <Button
+                    android:text="DEX"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Dex_Button"/>
+            <Button
+                    android:text="CON"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Con_Button"/>
+            <Button
+                    android:text="INT"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Int_Button"/>
+            <Button
+                    android:text="WIS"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Wis_Button"/>
+            <Button
+                    android:text="CHA"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/CHA_Button"/>
+
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="595dp"
+            app:layout_constraintStart_toStartOf="8dp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/tableLayout"
+            app:layout_constraintTop_toBottomOf="@+id/AbilityLayout">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </TableLayout>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline2" app:layout_constraintGuide_begin="20dp"
+                                          android:orientation="vertical"/>
+</android.support.constraint.ConstraintLayout>
