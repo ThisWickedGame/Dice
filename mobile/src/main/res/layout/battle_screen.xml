@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
                                              xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +9,8 @@
     <TableLayout
             android:layout_width="match_parent"
             android:layout_height="100dp" tools:layout_editor_absoluteY="8dp"
-            app:layout_constraintStart_toEndOf="@+id/tableLayout" app:layout_constraintEnd_toStartOf="@+id/tableLayout"
+            app:layout_constraintTop_toBottomOf="@+id/TabsLayout"
+            app:layout_constraintStart_toEndOf="@+id/tableLayout" app:layout_constraintEnd_toStartOf="@+id/TabsLayout"
             app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/SavesLayout">
 
@@ -49,16 +51,139 @@
     <TableLayout
             android:layout_width="match_parent"
             android:layout_height="595dp"
-            app:layout_constraintStart_toStartOf="8dp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent" android:id="@+id/tableLayout"
             app:layout_constraintTop_toBottomOf="@+id/SavesLayout">
 
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView
+                    android:layout_weight=".1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp" app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/Rapier_imageView"/>
+            <TextView
+                    android:text="Rapier"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Rapier_textView"/>
+            <Button
+                    android:text="1d20 + 8"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Rapier_Attack_Button"/>
+            <Button
+                    android:text="1d8 + 5"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Rapier_Damage_Button"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView
+                    android:layout_weight=".1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp" app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/Rifle_imageView"/>
+            <TextView
+                    android:text="Rifle"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Rifle_textView"/>
+            <Button
+                    android:text="1d20 + 8"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Rifle_Attack_Button"/>
+            <Button
+                    android:text="1d12 + 5"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Rifle_Damage_Button"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView
+                    android:layout_weight=".1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp" app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/Shortbow_imageView"/>
+            <TextView
+                    android:text="Shortbow"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Shortbow_textView"/>
+            <Button
+                    android:text="1d20 + 8"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Shortbow_Attack_Button"/>
+            <Button
+                    android:text="1d6 + 5"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Shortbow_Damage_Button"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView
+                    android:layout_weight=".1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp" app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/Shortsword_imageView"/>
+            <TextView
+                    android:text="Shortsword"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Shortsword_textView"/>
+            <Button
+                    android:text="1d20 + 8"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Shortsword_Attack_Button"/>
+            <Button
+                    android:text="1d6 + 5"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Shortsword_Damage_Button"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView
+                    android:layout_weight=".1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp" app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/ShortswordOH_imageView"/>
+            <TextView
+                    android:text="Shortsword (OH)"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/ShortswordOH_textView"/>
+            <Button
+                    android:text="1d20 + 8"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/ShortswordOH_Attack_Button"/>
+            <Button
+                    android:text="1d6"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/ShortswordOH_Damage_Button"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView
+                    android:layout_weight=".1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp" app:srcCompat="@mipmap/ic_launcher"
+                    android:id="@+id/Sneak_imageView"/>
+            <TextView
+                    android:text="Sneak Attack"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Sneak_textView"/>
+            <Button
+                    android:text="2d6"
+                    android:layout_weight=".16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/Sneak_Damage_Button"/>
+        </TableRow>
     </TableLayout>
-    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                          android:id="@+id/guideline2" app:layout_constraintGuide_begin="20dp"
-                                          android:orientation="vertical"/>
+    <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 </android.support.constraint.ConstraintLayout>

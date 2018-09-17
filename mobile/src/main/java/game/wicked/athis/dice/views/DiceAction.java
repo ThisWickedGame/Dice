@@ -1,5 +1,8 @@
 package game.wicked.athis.dice.views;
 
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import game.wicked.athis.dice.Events.RollingEvent;
 import game.wicked.athis.dice.Events.StraightRollEvent;
@@ -83,7 +86,10 @@ public class DiceAction extends AppCompatActivity {
 
     private void doAStraightDiceRoll(DiceType diceType) {
         RollingEvent diceRoll = new StraightRollEvent(diceType, 1);
-        onButtonShowPopupWindowClick(StringCleaner.youRolledA(diceRoll.roll()));
+        //ShowPopUp popUp = new ShowPopUp();
+        //popUp.onButtonShowPopupWindowClick(StringCleaner.youRolledA(diceRoll.roll()));
+        //onButtonShowPopupWindowClick(StringCleaner.youRolledA(diceRoll.roll()));
+        onButtonShowDialogClick(StringCleaner.youRolledA(diceRoll.roll()));
     }
 
     private void onButtonShowPopupWindowClick(String text) {
@@ -112,5 +118,18 @@ public class DiceAction extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    private void onButtonShowDialogClick(String text) {
+
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+        if (prev != null) {
+            ft.remove(prev);
+        }
+        ft.addToBackStack(null);
+        MyCustomDialogFragment dialogFragment = new MyCustomDialogFragment();
+        dialogFragment.setText(text);
+        int blah = dialogFragment.show(ft, "");
     }
 }
